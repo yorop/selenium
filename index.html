@@ -31,17 +31,34 @@
   <div class="row align-items-start mb-3">
     <hr>
     <h3>JavaScript で生成されるモーダルウィンドウ</h3>
-    <div class="col" id="div_modal"></div>
+    <div class="col" id="div_modal">
+      <button type="button" id="btnModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modModal">ウィンドウを開く</button>
+      <div class="modal fade" id="modModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">「閉じる」ボタンをクリックしてください</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary">了解</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">閉じる</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="row align-items-start mb-3">
     <hr>
     <h3>インラインフレーム</h3>
-    <div class="col-lg-6" id="div_iframe">
+    <div class="col-lg-5" id="div_iframe">
       <div class="ratio ratio-21x9">
         <iframe src="frame.html" title="iframe"></iframe>
       </div>
-
+    </div>
+    <div class="col-lg-5" id="div_iframe">
+      <div class="ratio ratio-21x9">
+        <iframe src="frame2.html" title="iframe2"></iframe>
+      </div>
     </div>
   </div>
 
@@ -52,29 +69,30 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">月</th>
-            <th scope="col">火</th>
-            <th scope="col">水</th>
-            <th scope="col">木</th>
+            <th scope="col">&#128570;</th>
+            <th scope="col">夜明け</th>
+            <th scope="col">夕暮れ</th>
+            <th scope="col">真夜中</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row">アリス</th>
+            <td>デザート</td>
+            <td>ひねもす</td>
+            <td>ブランコ</td>
           </tr>
           <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+            <th scope="row">ジャンニ</th>
+            <td>新宿駅</td>
+            <td>タマネギ</td>
+            <td>岩代駅</td>
           </tr>
           <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
+            <th scope="row">うさぎ</th>
+            <td>レコード</td>
+            <td>街角</td>
+            <td>太陽</td>
           </tr>
         </tbody>
       </table>

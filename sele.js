@@ -47,45 +47,12 @@ function changePmenu(){
     })
 }
 
-// モーダルウィンドウ の設定。 Bootstrap のサンプル使用
-function setModal(){
-    // ボタンの定義
-    let btnModal = document.createElement('div')
-    let btnModalHtml = '<button type="button" id="btnModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modModal">モーダルウィンドウを開く</button>'
-    btnModal.innerHTML = btnModalHtml
-
-    // モーダルウィンドウの定義
-    let modModalTop = document.createElement('div')
-    let modModalTopHtmlList = [
-        '<div class="modal fade" id="modModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">',
-            '<div class="modal-dialog">',
-                '<div class="modal-content">',
-                    '<div class="modal-body">「閉じる」ボタンをクリックしてください</div>',
-                    '<div class="modal-footer">',
-                        '<button type="button" class="btn btn-secondary">了解</button>',
-                        '<button type="button" class="btn btn-primary" data-bs-dismiss="modal">閉じる</button>',
-                    '</div>',
-                '</div>',
-            '</div>',
-        '</div>',
-    ]
-    let modModalTopHtml = modModalTopHtmlList.join('')
-    modModalTop.innerHTML = modModalTopHtml
-    
-
-    let divModal = document.getElementById('div_modal')
-    divModal.append(btnModal)
-    divModal.append(modModalTop)
-
-
-}
 
 
 
 // 初期画面作成
 function init(){
     setPmenu()
-    setModal()
 }
 
 init()
