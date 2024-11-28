@@ -47,12 +47,20 @@ function changePmenu(){
     })
 }
 
+function showAlert(){
+    alert('おやすみ')
+}
+function setAlert(){
+    let btnAlert = document.getElementById('btn_alert')
+    btnAlert.addEventListener('click', showAlert, false)
+}
 
 
 
 // 初期画面作成
 function init(){
     setPmenu()
+    setAlert()
 }
 
 init()

@@ -31,17 +31,23 @@
   <div class="row align-items-start mb-3">
     <hr>
     <h3>JavaScript で生成されるモーダルウィンドウ</h3>
-    <div class="col" id="div_modal">
-      <button type="button" id="btnModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modModal">ウィンドウを開く</button>
-      <div class="modal fade" id="modModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">「閉じる」ボタンをクリックしてください</div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary">了解</button>
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">閉じる</button>
-                </div>
-            </div>
+    <div class="col-3">
+      <button type="button" id="btnModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod_modal">ウィンドウを開く</button>
+    </div>
+    <div class="col-3">
+      <input class="form-control" type="text" id="input_frommodal" value="レコード">
+    </div>
+    <div class="modal fade" id="mod_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>入力フォームの内容をコピーして、「閉じる」ボタンをクリックしてください</p>
+            <p><input class="form-control" type="text" id="input_atmodal" value="サーカス"></p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary">了解</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">閉じる</button>
+          </div>
         </div>
       </div>
     </div>
@@ -78,8 +84,8 @@
         <tbody>
           <tr>
             <th scope="row">アリス</th>
-            <td>デザート</td>
             <td>ひねもす</td>
+            <td>リンゴ</td>
             <td>ブランコ</td>
           </tr>
           <tr>
@@ -90,7 +96,7 @@
           </tr>
           <tr>
             <th scope="row">うさぎ</th>
-            <td>レコード</td>
+            <td>ライオン</td>
             <td>街角</td>
             <td>太陽</td>
           </tr>
@@ -103,7 +109,9 @@
   <div class="row align-items-start mb-3">
     <hr>
     <h3>アラートダイアログ</h3>
-    <div class="col" id="div_alert"></div>
+    <div class="col" id="div_alert">
+      <button type="button" id="btn_alert" class="btn btn-primary">ウィンドウを開く</button>
+    </div>
   </div>
 
   <div class="row align-items-start mb-3">
