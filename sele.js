@@ -23,7 +23,7 @@ function setPmenu(){
         divSelect1.append(tmpOpt)
     })
     // Change event の追加
-    divSelect1.addEventListener('change', changePmenu, false)
+    divSelect1.addEventListener('change', changePmenu)
     // 初回だけセレクト2に北海道を設定する
     let divSelect2 = document.getElementById('div_select2')
     divSelect2.append(document.createElement('option'))
@@ -47,12 +47,27 @@ function changePmenu(){
     })
 }
 
+function setModalText(){
+    console.log('show')
+    document.getElementById('input_atmodal').setAttribute('value', 'サーカス')
+}
+function clearModalText(){
+    console.log('close')
+    document.getElementById('input_atmodal').setAttribute('value', '')
+}
+function setModal(){
+    let modModal = document.getElementById('mod_modal')
+    modModal.addEventListener('shown.bs.modal', setModalText)
+    modModal.addEventListener('hidden.bs.modal', clearModalText)
+}
+
+
 function showAlert(){
     alert('おやすみ')
 }
 function setAlert(){
     let btnAlert = document.getElementById('btn_alert')
-    btnAlert.addEventListener('click', showAlert, false)
+    btnAlert.addEventListener('click', showAlert)
 }
 
 
@@ -60,6 +75,7 @@ function setAlert(){
 // 初期画面作成
 function init(){
     setPmenu()
+    setModal()
     setAlert()
 }
 
