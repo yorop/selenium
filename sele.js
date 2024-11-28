@@ -53,7 +53,7 @@ function setModalText(){
 }
 function clearModalText(){
     console.log('close')
-    document.getElementById('input_atmodal').setAttribute('value', '')
+    document.getElementById('input_atmodal').setAttribute('value', 'おやすみ')
 }
 function setModal(){
     let modModal = document.getElementById('mod_modal')
@@ -63,7 +63,7 @@ function setModal(){
 
 
 function showAlert(){
-    alert('おやすみ')
+    alert('しっぽ')
 }
 function setAlert(){
     let btnAlert = document.getElementById('btn_alert')
