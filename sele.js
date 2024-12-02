@@ -49,7 +49,7 @@ function changePmenu(){
 
 function setModalText(){
     console.log('show')
-    document.getElementById('input_atmodal').setAttribute('value', 'サーカス')
+    document.getElementById('input_atmodal').setAttribute('value', 'クレヨン')
 }
 function clearModalText(){
     console.log('close')
